@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">android_course_3</string>
+    <string name="first_quad">Text composable</string>
+    <string name="content_1">Displays text and follows the recommended Material Design guidelines.</string>
+    <string name="second_quad">Image composable</string>
+    <string name="content_2">Creates a composable that lays out and draws a given Painter class object.</string>
+    <string name="third_quad">Row composable</string>
+    <string name="content_3">A layout composable that places its children in a horizontal sequence.</string>
+    <string name="fourth_quad">Column composable</string>
+    <string name="content_4">A layout composable that places its children in a vertical sequence.</string>
+    Text composable
+</resources>
