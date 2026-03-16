@@ -1,5 +1,5 @@
 // No kotlin funcoes sao consideradas construcoes de primeira classe, como um tipo de dado, Int, Double, String, etc.
-// Podem ser armazenadas em várias, transmitir para outras funcoes como argumentos, etc.
+// Podem ser armazenadas em váriaveis, transmitidas para outras funcoes como argumentos, etc.
 
 
 fun main() {

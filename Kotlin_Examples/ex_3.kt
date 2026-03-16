@@ -28,7 +28,7 @@ fun main() {
 //       println("You didn't input a name. ${favoriteActor?.length}")
 //     }
     
-     val lengthOfName = favoriteActor?.length?: 0
+    val lengthOfName = favoriteActor?.length?: 0
     
     print(lengthOfName)
 

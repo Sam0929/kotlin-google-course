@@ -13,5 +13,6 @@ fun auctionPrice(bid: Bid?, minimumPrice: Int): Int {
 //    } else{
 //         return minimumPrice
 //    }
-     return bid?.amount ?: minimumPrice
+     return bid?.amount ?: minimumPrice    //retorne bid.amount se não for null, se for null retorne minimumPrice. 
+                                           //Elvis verifica se valor1 é null, se for usa valor2. (valor1 ?: valor2)
 }
