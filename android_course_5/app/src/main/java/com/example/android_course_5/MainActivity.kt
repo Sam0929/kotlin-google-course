@@ -42,6 +42,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.android_course_5.ui.theme.Android_course_5Theme
+import org.jetbrains.annotations.VisibleForTesting
 import java.text.NumberFormat
 
 class MainActivity : ComponentActivity() {
@@ -61,8 +62,8 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TipTimeLayout(modifier: Modifier = Modifier) {
 
-    var amountInput by remember { mutableStateOf("0")}
-    var percentageInput by remember { mutableStateOf("15")}
+    var amountInput by remember { mutableStateOf("")}
+    var percentageInput by remember { mutableStateOf("")}
     var roundUp by remember { mutableStateOf(false) }
 
     val amount = amountInput.toDoubleOrNull() ?: 0.0
@@ -180,13 +181,14 @@ fun RoundTheTipRow(
  * according to the local currency.
  * Example would be "$10.00".
  */
-private fun calculateTip(
+@VisibleForTesting
+internal fun calculateTip(
     amount: Double,
     tipPercent: Double = 15.0,
     roundUp: Boolean
 ): String {
-    var tip = tipPercent / 100 * amount
 
+    var tip = tipPercent / 100 * amount
     if (roundUp) {
         tip = kotlin.math.ceil(tip)
     }
